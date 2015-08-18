@@ -83,6 +83,10 @@
     - wine
     - zsh
 
+- name: Install Microsoft Fonts
+  apt: name=msttcorefonts state=present
+  notify: fonts
+
 - name: Check for WPS Office
   stat: path=/opt/kingsoft
   register: wps
