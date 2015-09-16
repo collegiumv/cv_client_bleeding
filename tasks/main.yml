@@ -146,6 +146,18 @@
     - skll
     - thefuck
 
+- name: Install giant dictionaries
+  apt: name={{ item }} state=present
+  with_items:
+    - scowl
+    - wamerican-insane
+
+- name: Move old dictionary
+  file: path=/opt/kingsoft/wps-office/office6/dicts/en_US/main.dic state=absent
+
+- name: Symlink giant dictionaries
+  file: src=/usr/share/dict/american-english-insane dest=/opt/kingsoft/wps-office/office6/dicts/en_US/main.dic state=link
+  
 - name: Make Chrome use system printing dialog
   replace: dest=/usr/share/applications/google-chrome.desktop regexp='^Exec=/usr/bin/google-chrome-stable' replace='Exec=/usr/bin/google-chrome-stable --args --disable-print-preview'
 
