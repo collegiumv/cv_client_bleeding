@@ -54,6 +54,7 @@
     - eclipse
     - codeblocks
     - git
+    - ocaml
     - openjdk-7-jdk
     - r-base
     - r-base-dev
