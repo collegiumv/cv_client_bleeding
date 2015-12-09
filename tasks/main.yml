@@ -60,6 +60,7 @@
     - shelldap
     - spim
     - rust-stable
+    - libboost-all-dev
 
 - name: Install additional editors
   apt: name={{ item }} state=present
