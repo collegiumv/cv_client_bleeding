@@ -92,6 +92,7 @@
     - rxvt-unicode-256color
     - shutter
     - sl
+    - sshpass
     - tcpdump
     - tmux
     - tree
@@ -214,6 +215,12 @@
 
 - name: Add Old Session Killer to Crontab
   copy: src=cleanup dest=/etc/cron.d/cleanup owner=root group=root mode=0544
+
+- name: Copy Matlab script
+  copy: src=matlab.sh dest=/usr/local/sbin/matlab.sh owner=root group=root mode=0755
+
+- name: Copy Matlab menu item
+  copy: src=matlab.desktop dest=/usr/share/applications/matlab.desktop owner=root group=root mode=644
 
 - include: wps.yml
 
