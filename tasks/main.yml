@@ -34,6 +34,7 @@
 - name: Install editing suites
   apt: name={{ item }} state=present
   with_items:
+    - auctex
     - gedit
     - gimp
     - gimp-data
