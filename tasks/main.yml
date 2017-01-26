@@ -54,6 +54,7 @@
     - openjdk
     - R
     - racket
+    - rstudio
     - spim
     - rust
     - cargo
